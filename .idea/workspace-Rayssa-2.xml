@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="98f13122-86ac-431a-8514-65f03d80245e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$PROJECT_DIR$/../javafx-sdk-21.0.6/lib/javafx.graphics.jar!/javafx/application/Application.class" root0="SKIP_INSPECTION" />
+    <setting file="jar://$PROJECT_DIR$/../javafx-sdk-21.0.6/lib/javafx.graphics.jar!/javafx/scene/layout/VBox.class" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2sgJR3hDfbfSjIOQjmo0F5IMnQj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CadCliente.executor": "Run",
+    "Application.CadUsuario.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/bispo/Downloads/openjfx-21.0.6_windows-x64_bin-sdk/javafx-sdk-21.0.6/lib",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19195402",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.3058104",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rayssa.sbispo\OneDrive - SENAC - SP\AppHotelaria\src\view\resoucers\fonts" />
+      <recent name="C:\Users\rayssa.sbispo\OneDrive - SENAC - SP\AppHotelaria\src\view\resoucers\img" />
+      <recent name="C:\Users\rayssa.sbispo\OneDrive - SENAC - SP\AppHotelaria\src\view\img" />
+      <recent name="C:\Users\pamella.cpesilva.SENACEDU\IdeaProjects\AppHotelaria\src\view\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CadUsuario">
+    <configuration name="CadCliente" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="view.CadCliente" />
+      <module name="AppHotelaria" />
+      <selectedOptions>
+        <option name="environmentVariables" visible="false" />
+      </selectedOptions>
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\bispo\Downloads\openjfx-21.0.6_windows-x64_bin-sdk\javafx-sdk-21.0.6\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CadUsuario" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="view.CadUsuario" />
+      <module name="AppHotelaria" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\bispo\Downloads\openjfx-21.0.6_windows-x64_bin-sdk\javafx-sdk-21.0.6\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.CadCliente" />
+      <item itemvalue="Application.CadUsuario" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98f13122-86ac-431a-8514-65f03d80245e" name="Changes" comment="" />
+      <created>1738871278002</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738871278002</updated>
+      <workItem from="1738949151506" duration="7422000" />
+      <workItem from="1739320283284" duration="1477000" />
+      <workItem from="1739469472442" duration="5371000" />
+      <workItem from="1739551996717" duration="9073000" />
+      <workItem from="1739918403787" duration="22000" />
+      <workItem from="1740071213865" duration="8131000" />
+      <workItem from="1740089521047" duration="6000" />
+      <workItem from="1740157283107" duration="9517000" />
+      <workItem from="1740520749151" duration="7000" />
+      <workItem from="1740674582442" duration="1509000" />
+      <workItem from="1740676530549" duration="4087000" />
+      <workItem from="1740760680467" duration="4508000" />
+      <workItem from="1740769137745" duration="4695000" />
+      <workItem from="1741279249754" duration="298000" />
+      <workItem from="1741280576990" duration="7914000" />
+      <workItem from="1741291246007" duration="153000" />
+      <workItem from="1741291431485" duration="820000" />
+      <workItem from="1741292276965" duration="698000" />
+      <workItem from="1741365524689" duration="10675000" />
+      <workItem from="1741464229547" duration="4575000" />
+      <workItem from="1741884897786" duration="10582000" />
+      <workItem from="1742238650990" duration="642000" />
+      <workItem from="1742262311374" duration="1354000" />
+      <workItem from="1742498512215" duration="3905000" />
+      <workItem from="1742574791733" duration="9189000" />
+      <workItem from="1743699134729" duration="9549000" />
+      <workItem from="1744130982481" duration="11592000" />
+      <workItem from="1744303046431" duration="10237000" />
+      <workItem from="1744585522815" duration="733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
