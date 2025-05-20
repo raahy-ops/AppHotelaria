@@ -1,7 +1,7 @@
 package util;
 import java.sql.Connection;
 
-public class testeconexaodb {
+public class Testeconexaodb {
     public static void main(String[] args) {
     Conexao conexao = new Conexao();
     Connection condb = conexao.conectar();
