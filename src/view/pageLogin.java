@@ -1,4 +1,5 @@
 package view; //Package view (classes que, quando executadas, interagem com o usuário)
+
 import javafx.application.Application; //Ciclo de vida da aplicação (init(), start(), stop() --> launch())
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -20,14 +21,11 @@ public class pageLogin extends Application {
         //Carregar imagens
 
 
-
         Image imgIcon = new Image(getClass().getResourceAsStream
                 ("/view/resoucers/img/iconsHotel.png"));
 
-        Image imagem = new Image (getClass().getResourceAsStream
+        Image imagem = new Image(getClass().getResourceAsStream
                 ("/view/resoucers/img/AdobeStock_995526341.jpeg"));
-
-
 
 
         ImageView imageView = new ImageView(imagem);
@@ -36,15 +34,8 @@ public class pageLogin extends Application {
         imageView.setPreserveRatio(true); // Mantém a proporção da imagem
 
 
-
         BorderPane mainPane = new BorderPane();
         mainPane.setLeft(imageView);
-
-
-
-
-
-
 
 
         // Titulo
@@ -54,14 +45,11 @@ public class pageLogin extends Application {
 
 
         Button btnEntrar = new Button("Entrar");
-        HBox titleBox= new HBox(lblTitulo,btnEntrar); // Add dentro do primeiro hbox
+        HBox titleBox = new HBox(lblTitulo, btnEntrar); // Add dentro do primeiro hbox
 
         btnEntrar.setStyle("-fx-background-color: #bd8d46;  -fx-font-weight: bold; -fx-border-radius: 16; -fx-background-radius: 16px; -fx-padding: 5px 60px; -fx-text-fill: white;  -fx-cursor: hand;");
 
         btnEntrar.setAlignment(Pos.CENTER);
-
-
-
 
 
         titleBox.setAlignment(Pos.CENTER_RIGHT);
@@ -73,17 +61,13 @@ public class pageLogin extends Application {
         txtSenha.setPromptText("Digite sua senha ");
 
 
-
-        Label lblEmail = new Label( "E-mail: ");
+        Label lblEmail = new Label("E-mail: ");
         TextField txtEmail = new TextField();
         txtEmail.setPromptText("email@gmail.com");
 
         txtEmail.setStyle("-fx-border-radius: 10; -fx-background-radius: 10px;");
         txtSenha.setStyle("-fx-border-radius: 10; -fx-background-radius: 10px;");
         lblEmail.setStyle("-fx-text-fill: #bd8d46");
-
-
-
 
 
         GridPane formGrid = new GridPane();
@@ -94,26 +78,17 @@ public class pageLogin extends Application {
         formGrid.add(txtSenha, 1, 0);
 
 
-
-
-
-
-
         //lacuna, espaçamento
         formGrid.setHgap(5); // Gap (lacuna) de uma coluna para outra (na horizontal)
         formGrid.setVgap(5); // gap (lacuna) de uma linha para outtra na vertical
         formGrid.setAlignment(Pos.CENTER_RIGHT);
 
 
-
-
-        VBox layout = new VBox( 10,  titleBox, formGrid,btnEntrar);
+        VBox layout = new VBox(10, titleBox, formGrid, btnEntrar);
         layout.setAlignment(Pos.CENTER_RIGHT);
         mainPane.setCenter(layout);
         janela.setResizable(false);
-       layout.setPadding(new Insets(40));
-
-
+        layout.setPadding(new Insets(40));
 
 
         //layout -> mainPaine
@@ -127,17 +102,14 @@ public class pageLogin extends Application {
         janela.show();
 
 
-
-
         HBox hbox = new HBox(5); // Espaço entre a imagem e o TextField
         hbox.setAlignment(Pos.CENTER_LEFT); // Alinha os itens à esquerda
-
 
 
     }
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         launch(args); //Inicializa o JAVAFX (aplicação)
     }
 
