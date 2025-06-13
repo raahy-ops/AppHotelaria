@@ -8,24 +8,43 @@ import java.sql.Connection;
 public class Testeconexaodb {
     public static void main(String[] args) {
         Conexao conexao = new Conexao();
-        Connection condb = conexao.conectar();
-        if (condb != null) {
-            System.out.println("Conexão estabelecida com sucesso!");
 
-            try {
-                CargosDAO cargosDAO = new CargosDAO();
-                cargosDAO.inserirCargos();
+        try (Connection condb = conexao.conectar()) {
+            if (condb != null) {
+                System.out.println("Conexão estabelecida com sucesso!");
 
-                System.out.println("Cargo Inserido com sucesso!");
+                try {
+                    AdicionaisDAO adicionaisDAO = new AdicionaisDAO();
+                    adicionaisDAO.inserirAdicionais(); // Correção do método
 
-                condb.close();
-                System.out.println("conexão encerrada!");
+                    CargosDAO cargosDAO = new CargosDAO();
+                    //cargosDAO.inserirCargos();
+                    cargosDAO.pesquisarargo();
 
-            } catch (Exception erro) {
-                System.out.println("Erro ao encerrar a conexão: " + erro.getMessage());
+                    QuartosDAO quartosDAO = new QuartosDAO();
+                   // quartosDAO.inserirQuarto();
+                    quartosDAO.pesquisarQuarto();
+
+
+                    ClientesDAO clientesDAO = new ClientesDAO();
+                    clientesDAO.inserirCliente();
+                    clientesDAO.pesquisarCliente();
+
+                    UsuariosDAO usuariosDAO = new UsuariosDAO();
+                    usuariosDAO.inserirUsuario();
+                    usuariosDAO.pesquisarUsuario();
+
+
+
+                    System.out.println("Operações realizadas com sucesso!");
+                } catch (Exception erro) {
+                    System.out.println("Erro ao executar operações: " + erro.getMessage());
+                }
+            } else {
+                System.out.println("Falha ao conectar ao banco de dados!");
             }
-        } else {
-            System.out.println("Falha ao conectar ao banco de dados!");
+        } catch (Exception erro) {
+            System.out.println("Erro ao estabelecer conexão: " + erro.getMessage());
         }
     }
 }

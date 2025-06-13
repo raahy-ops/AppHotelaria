@@ -21,6 +21,7 @@ public class AdicionaisDAO {
             novoAdicional.setDouble(2, 600.00);
 
             int linhaAfetada = novoAdicional.executeUpdate();
+            conndb.close(); //Encerrar conexão após inserção
             return linhaAfetada > 0;
 
         } catch (Exception erro) {
@@ -28,5 +29,6 @@ public class AdicionaisDAO {
             return false;
         }
     }
+
 
 }
