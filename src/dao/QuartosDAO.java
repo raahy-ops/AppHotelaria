@@ -38,9 +38,7 @@ public class QuartosDAO {
     public boolean alterarQuarto() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement quartoAlterado  = conndb.prepareStatement("UPDATE quartos" +
-                    "SET nome = ?, numero = ?, qnt_cama_casal = ?, " +
-                    "qnt_cama_solteiro = ?, preco = ?, disponivel = ? WHERE id = ?; ");
+            PreparedStatement quartoAlterado  = conndb.prepareStatement("UPDATE quartos SET nome = ?, numero = ?, qnt_cama_casal = ?, qnt_cama_solteiro = ?, preco = ?, disponivel = ? WHERE id = ?; ");
 
             quartoAlterado.setString(1, "Cleiton");
             quartoAlterado.setString(2, "606");
@@ -64,7 +62,7 @@ public class QuartosDAO {
         try {
             Connection conndb = conexao.conectar();
             PreparedStatement removeQuarto = conndb.prepareStatement
-                    ("DELETE FROM clientes WHERE id = ?;");
+                    ("DELETE FROM quartos WHERE id = ?;");
             removeQuarto.setInt(1, 1);
             int linhaAfetada = removeQuarto.executeUpdate();
             conndb.close();
@@ -80,7 +78,7 @@ public class QuartosDAO {
     public void pesquisarQuarto() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement buscaQuarto = conndb.prepareStatement("SELECT nome, numero, qnt_cama_casal, qnt_cama_solteiro, preco, disponivel FROM cargos WHERE id = ?");
+            PreparedStatement buscaQuarto = conndb.prepareStatement("SELECT nome, numero, qnt_cama_casal, qnt_cama_solteiro, preco, disponivel FROM quartos WHERE id = ?");
             buscaQuarto.setInt(1, 1);
             ResultSet resultado = buscaQuarto.executeQuery();
 
@@ -92,7 +90,7 @@ public class QuartosDAO {
                 Double preco = resultado.getDouble("preco");
                 Boolean disponivel = resultado.getBoolean("disponivel");
 
-                System.out.println("Nome: " + nome + " - Numero: " + numero + " -  qnt_cama_casal: " +  qnt_cama_casal + "qnt_cama_solteiro" + qnt_cama_solteiro + "preco" + preco + "disponivel" + disponivel);
+                System.out.println("Nome: " + nome + " - Numero: " + numero + " - Cama_Casal:  " + qnt_cama_casal + " - Cama_solteiro: " + qnt_cama_solteiro + " Preço: " + preco + " Disponivel: " + disponivel);
             }
             conndb.close();
         }

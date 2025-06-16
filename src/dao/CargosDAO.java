@@ -15,7 +15,7 @@ public class CargosDAO {
         try {
 
             Connection conndb = conexao.conectar();
-            PreparedStatement novoCargo = conndb.prepareStatement("INSERT INTO cargos  " + "(nome) VALUES (?);");
+            PreparedStatement novoCargo = conndb.prepareStatement("INSERT INTO cargos  (nome) VALUES (?);");
 
             //Setar os Parâmetros
             novoCargo.setString(1, "TI");
@@ -39,10 +39,9 @@ public class CargosDAO {
     public boolean alterarCargo() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement cargoAlterado  = conndb.prepareStatement("UPDATE cargos" +
-                    "SET nome = ? " + " WHERE id = ?; ");
-            cargoAlterado.setString(2, "TI");
-            cargoAlterado.setInt(5, 1); //Alterar usuário c/ chave primária ID=1
+            PreparedStatement cargoAlterado  = conndb.prepareStatement("UPDATE cargos SET nome = ?  WHERE id = ?; ");
+            cargoAlterado.setString(1, "TI");
+            cargoAlterado.setInt(2, 1); //Alterar usuário c/ chave primária ID=1
 
             int linhaAfetada = cargoAlterado.executeUpdate();
             conndb.close();
@@ -60,6 +59,7 @@ public class CargosDAO {
             PreparedStatement removeCargo = conndb.prepareStatement
                     ("DELETE FROM cargos WHERE id = ?;");
             removeCargo.setInt(1, 1);
+            removeCargo.setInt(1, 2);
             int linhaAfetada = removeCargo.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;
@@ -71,7 +71,7 @@ public class CargosDAO {
     }
 
     //Query SELECT
-    public void pesquisarargo() {
+    public void pesquisarCargo() {
         try {
             Connection conndb = conexao.conectar();
             PreparedStatement buscaCargo = conndb.prepareStatement("SELECT nome" +

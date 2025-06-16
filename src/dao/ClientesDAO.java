@@ -40,9 +40,7 @@ public class ClientesDAO {
     public boolean alterarCliente() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement clienteAlterado  = conndb.prepareStatement("UPDATE clientes" +
-                    "SET nome = ?, email = ?, telefone = ?, " +
-                    "cpf = ? WHERE id = ?; ");
+            PreparedStatement clienteAlterado  = conndb.prepareStatement("UPDATE clientes SET nome = ?, email = ?, telefone = ?, cpf = ? WHERE id = ?; ");
             clienteAlterado.setString(1, "Cleiton");
             clienteAlterado.setString(2, "Cleiton@gmail.com");
             clienteAlterado.setString(3, "(15)23598828");
@@ -65,6 +63,7 @@ public class ClientesDAO {
             PreparedStatement removeCliente = conndb.prepareStatement
                     ("DELETE FROM clientes WHERE id = ?;");
             removeCliente.setInt(1, 1);
+
             int linhaAfetada = removeCliente.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;
@@ -79,8 +78,7 @@ public class ClientesDAO {
     public void pesquisarCliente() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement buscacliente = conndb.prepareStatement("SELECT nome, email, telefone, cpf " +
-                    " FROM clientes WHERE id = ?");
+            PreparedStatement buscacliente = conndb.prepareStatement("SELECT nome, email, telefone, cpf FROM clientes WHERE id = ?");
             buscacliente.setInt(1, 1);
             ResultSet resultado = buscacliente.executeQuery();
 

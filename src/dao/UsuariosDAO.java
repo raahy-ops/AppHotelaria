@@ -33,14 +33,12 @@ public class UsuariosDAO {
     public boolean alterarUsuario() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement usuarioAlterado  = conndb.prepareStatement("UPDATE usuarios" +
-                    "SET nome = ?, email = ?, senha = md5(?) + ?, " +
-                    "cargo_id = ? WHERE id = ?; ");
-            usuarioAlterado.setString(1, "Rayssa");
-            usuarioAlterado.setString(2, "Rayssa@gmail.com");
+            PreparedStatement usuarioAlterado  = conndb.prepareStatement("UPDATE usuarios SET nome = ?, email = ?, senha = md5(?) + ?,cargo_id = ? WHERE id = ?; ");
+            usuarioAlterado.setString(1, "Raysa");
+            usuarioAlterado.setString(2, "Raysa@gmail.com");
             usuarioAlterado.setString(3, "123");
             usuarioAlterado.setInt(4, 1);
-            usuarioAlterado.setInt(5, 1); //Alterar usuário c/ chave primária ID=1
+            usuarioAlterado.setInt(5, 1);//Alterar usuário c/ chave primária ID=1
             int linhaAfetada = usuarioAlterado.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;

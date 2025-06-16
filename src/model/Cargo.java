@@ -1,9 +1,9 @@
 package model;
-public class Role {
+public class Cargo {
     private int id;
     private String nome;
 
-    public Role(String nome) {
+    public Cargo(String nome) {
         this.nome = nome;
     }
     public int getId() {
