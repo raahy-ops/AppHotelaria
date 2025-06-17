@@ -44,7 +44,7 @@ public class Testeconexaodb {
 
                     UsuariosDAO usuariosDAO = new UsuariosDAO();
                     //usuariosDAO.inserirUsuario();
-                    //usuariosDAO.pesquisarUsuario();
+                    //usuariosDAO.autenticarUsuario();
                     //usuariosDAO.alterarUsuario();
                     //usuariosDAO.deletarUsuario();
 
