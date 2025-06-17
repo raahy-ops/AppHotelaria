@@ -58,7 +58,7 @@ public class CadCliente extends Application {
         // Titulo
         Label lblTitulo = new Label(" Cadastro de Cliente");
         lblTitulo.setAlignment(Pos.CENTER);
-        lblTitulo.setStyle("-fx-font-size: 18px;-fx-font-weight: bold;");
+        lblTitulo.setStyle("-fx-font-size: 18px;-fx-font-weight: bold; -fx-color: #1C1E10");
         HBox titleBox= new HBox(viewimgUser,lblTitulo); // Add dentro do primeiro hbox
 
 

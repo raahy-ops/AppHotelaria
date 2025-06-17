@@ -130,7 +130,7 @@ public class sidebar extends VBox {
 
 
 
-        setStyle("-fx-background-color: #D9C1D7; -fx-padding: 40px;");
+        setStyle("-fx-background-color: #967143; -fx-padding: 40px;");
         setSpacing(12);
         getChildren().addAll(lblMenu, btnclientes,btnFuncionario,btnQuartos,btnReserva,btnRelatorio);
 
