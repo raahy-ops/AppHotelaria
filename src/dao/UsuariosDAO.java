@@ -39,6 +39,8 @@ public class UsuariosDAO {
             usuarioAlterado.setString(3, "123");
             usuarioAlterado.setInt(4, 1);
             usuarioAlterado.setInt(5, 1);//Alterar usuário c/ chave primária ID=1
+            usuarioAlterado.setInt(6, 1);
+
             int linhaAfetada = usuarioAlterado.executeUpdate();
             conndb.close();
             return linhaAfetada > 0;

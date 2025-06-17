@@ -15,11 +15,14 @@ public class PedidosDAO {
     public boolean inserirPedido() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement novoPedido = conndb.prepareStatement("INSERT INTO usuarios (usuario_id, cliente_id, pagamento) VALUES (?, ?, ?);");
+            PreparedStatement novoPedido = conndb.prepareStatement("INSERT INTO pedidos (usuario_id, cliente_id, data, pagamento) VALUES (?, ?, ?, ?);");
             //Setar os parâmetros
-            novoPedido.setInt(1, 1);
-            novoPedido.setInt(2, 1);
-            novoPedido.setString(3, "Dinheiro");
+
+          novoPedido.setInt(1, 25);
+          novoPedido.setInt(2, 28);
+          novoPedido.setDate(3, new java.sql.Date(System.currentTimeMillis()));
+      novoPedido.setString(4, "Dinheiro");
+
 
             int linhaAfetada = novoPedido.executeUpdate();
             conndb.close(); //Encerrar conexão após inserção
@@ -72,9 +75,8 @@ public class PedidosDAO {
     public void pesquisarPedido() {
         try {
             Connection conndb = conexao.conectar();
-            PreparedStatement buscaPedido = conndb.prepareStatement("SELECT usuario_id, cliente_id, pagamento " +
-                    " FROM pedidos WHERE id = ?");
-            buscaPedido.setInt(1, 1);
+            PreparedStatement buscaPedido = conndb.prepareStatement("SELECT usuario_id, cliente_id, pagamento FROM pedidos WHERE id = ?");
+            buscaPedido.setInt(1, 2);
             ResultSet resultado = buscaPedido.executeQuery();
 
             while (resultado.next()) {

@@ -29,7 +29,7 @@ public class Testeconexaodb {
 
 
                     QuartosDAO quartosDAO = new QuartosDAO();
-                   // quartosDAO.inserirQuarto();
+                    //quartosDAO.inserirQuarto();
                     //quartosDAO.pesquisarQuarto();
                    //quartosDAO.alterarQuarto();
                     //quartosDAO.deletarQuarto();
